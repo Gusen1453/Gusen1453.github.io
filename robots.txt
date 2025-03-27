@@ -1,0 +1,13 @@
+# robots.txt for https://gusen1453.github.io/
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+Allow: /feed.xml
+Sitemap: https://gusen1453.github.io/sitemap.xml
+
+# 禁止爬虫访问的目录
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /assets/vendor/
+Disallow: /admin/
+Disallow: /README.md 

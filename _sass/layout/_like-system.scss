@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Like Button Styles
+   ========================================================================== */
+
+.like-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 2em;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 1em;
+  user-select: none;
+  
+  .like-icon {
+    margin-right: 0.5em;
+    transition: transform 0.3s ease;
+  }
+  
+  .like-count {
+    font-weight: bold;
+  }
+  
+  &:hover {
+    background-color: #f0f0f0;
+    
+    .like-icon {
+      transform: scale(1.2);
+    }
+  }
+  
+  &.liked {
+    color: #e25555;
+    border-color: #e25555;
+    background-color: rgba(226, 85, 85, 0.1);
+    
+    .like-icon {
+      color: #e25555;
+    }
+  }
+  
+  &.has-likes {
+    .like-count {
+      color: #e25555;
+    }
+  }
+}
+
+/* Heart Animation */
+.heart-animation {
+  position: absolute;
+  font-size: 1.5em;
+  pointer-events: none;
+  animation: float-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  100% {
+    transform: translateY(-20px) scale(1.5);
+    opacity: 0;
+  }
+} 

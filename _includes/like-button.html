@@ -1,0 +1,11 @@
+{% comment %}
+点赞按钮组件。使用方法: {% include like-button.html post_id=page.id %}
+{% endcomment %}
+
+<div class="like-container">
+  <button class="like-button" data-post-id="{{ include.post_id | slugify }}">
+    <span class="like-icon">❤</span>
+    <span class="like-text">点赞</span>
+    <span class="like-count">0</span>
+  </button>
+</div> 
