@@ -1,8 +1,8 @@
-title: Cayman Blog Theme
-description: Cayman Blog Theme is a clean, responsive blogging theme for Jekyll and Gitlab/GitHub Pages.
+title: 罗一鸣的个人网站
+description: 大模型算法专家 | 金融科技领域开发者
 show_downloads: true
 
-baseurl: "/cayman-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "https://Gusen1453.github.io" # change this to the base hostname & protocol for your site
 
 
@@ -16,10 +16,10 @@ cayman-blog:
 theme: # leave it empty
 
 # social
-author: lorepirri
+author: 罗一鸣
 image: /thumbnail-jumbo.png
 twitter:
-  username: lorepirri
+  username: 
 
 plugins:
   - jekyll-target-blank
@@ -38,4 +38,4 @@ kramdown:
 target-blank:
     rel: nofollow
 
-header_page_refs: ['now', 'about', 'contact']
+header_page_refs: ['blogs', 'resume', 'about', 'contact']

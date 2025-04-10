@@ -1,17 +1,24 @@
 ---
-#
-# Here you can change the text shown in the Home page before the Latest Posts section.
-#
-# Edit cayman-blog's home layout in _layouts instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
 layout: home
 ---
 
-Cayman Blog Theme is a clean, responsive blogging theme for Jekyll. It is inspired by the Cayman Theme for Github Pages, which can be greatly used for single projects but not as blogging platform.
+# 欢迎来到我的个人网站
 
-This theme has instead all you need to start today blogging with Jekyll, and no effort: pages, posts, few social buttons. Try loading this on mobile too.
+这是罗一鸣的个人网站，我在这里分享我的技术思考、项目经验和专业见解。
 
-Have a look at the Github page for more information.
+作为一名专注于大语言模型和金融科技领域的算法专家，我致力于探索人工智能在金融领域的创新应用。
 
-You find this descriptive text in the `index.md` file, so you can change it, or remove it completely, according to your needs.
+## 我的专业领域
+
+- RAG技术架构与多Agent系统开发
+- 金融搜索与智能推荐系统
+- 数据平台及量化分析
+- 大模型落地实践与优化
+
+## 关于我
+
+我在深圳市问智信息技术有限公司担任大模型算法Leader，负责金融综合问答系统的架构设计与实施，主导RAG和多Agent体系的构建。
+
+在此之前，我在浙江同花顺智能科技有限公司担任算法工程师，负责语音识别与合成项目的开发。
+
+想了解更多关于我的信息，请查看[我的简历](/resume/)或[联系我](/contact/)。 

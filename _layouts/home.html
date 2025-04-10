@@ -6,12 +6,12 @@ layout: default
 
   {{ content }}
 
-  <h2>Latest Posts</h2>
+  <h2>精选博客</h2>
 
   <div>&nbsp;</div>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in site.posts limit:3 %}
       <li>
 
         {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
@@ -22,9 +22,51 @@ layout: default
         </h2>
 
         {{ post.excerpt | markdownify | truncatewords: 30 }}
+        
+        <a href="{{ post.url | absolute_url }}" class="read-more">阅读更多...</a>
 
       </li>
     {% endfor %}
   </ul>
+  
+  <div class="see-all-posts">
+    <a href="{{ '/blogs/' | absolute_url }}" class="all-posts-link">查看全部博客 »</a>
+  </div>
 
 </div>
+
+<style>
+  .read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #0366d6;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  .see-all-posts {
+    margin-top: 2rem;
+    text-align: right;
+  }
+  
+  .all-posts-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0366d6;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .all-posts-link:hover {
+    background-color: #0256b4;
+    text-decoration: none;
+    color: white;
+  }
+</style>
