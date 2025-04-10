@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 博客 | Blogs
-permalink: /blogs/
+title: Blogs
+permalink: /en/blogs/
 ref: blogs
 order: 2
-lang: zh
+lang: en
 ---
 
 <div class="blogs-container">

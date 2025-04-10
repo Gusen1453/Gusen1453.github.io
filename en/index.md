@@ -1,6 +1,6 @@
 ---
 layout: home
-lang: zh
+lang: en
 ---
 
 # {{ welcome_title }}
@@ -22,4 +22,4 @@ lang: zh
 
 {{ welcome_about_text2 }}
 
-{{ welcome_about_text3 }} [{{ welcome_about_text4 }}](/resume/) {{ welcome_about_text5 }} [{{ welcome_about_text6 }}](/contact/). 
+{{ welcome_about_text3 }} [{{ welcome_about_text4 }}](/en/resume/) {{ welcome_about_text5 }} [{{ welcome_about_text6 }}](/en/contact/). 
