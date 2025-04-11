@@ -22,7 +22,7 @@ twitter:
   username: 
 
 plugins:
-  - jekyll-target-blank
+  # - jekyll-target-blank
 
 markdown: kramdown
 kramdown:
@@ -37,5 +37,9 @@ kramdown:
 
 target-blank:
     rel: nofollow
+    add_css_classes: ext-link
+    js_flag: false
+    noopener: false
+    noreferrer: false
 
 header_page_refs: ['blogs', 'resume', 'about', 'contact']

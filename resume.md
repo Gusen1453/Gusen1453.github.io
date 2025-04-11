@@ -1,30 +1,23 @@
 ---
 layout: page
-title: 简历 | Resume
+title: 简历
 permalink: /resume/
+ref: resume
+order: 1
 ---
 
-# 简历 | Resume
+# 个人简历
 
 <div class="resume-container">
     <div class="resume-section">
         <div class="section-header">
-            <h2>中文简历</h2>
+            <h2>专业简历</h2>
             <a href="/assets/resume/pdf/resume_zh.pdf" class="btn btn-primary" download>
                 <i class="fas fa-download"></i> 下载PDF
             </a>
         </div>
+        
         {% include_relative assets/resume/resume_zh.md %}
-    </div>
-    
-    <div class="resume-section">
-        <div class="section-header">
-            <h2>English Resume</h2>
-            <a href="/assets/resume/pdf/resume_en.pdf" class="btn btn-primary" download>
-                <i class="fas fa-download"></i> Download PDF
-            </a>
-        </div>
-        {% include_relative assets/resume/resume_en.md %}
     </div>
 </div>
 
@@ -75,17 +68,6 @@ permalink: /resume/
 
 .fas {
     margin-right: 0.5rem;
-}
-
-/* 响应式设计 */
-@media (min-width: 768px) {
-    .resume-container {
-        flex-direction: row;
-    }
-    
-    .resume-section {
-        flex: 1;
-    }
 }
 
 /* Markdown 样式优化 */
