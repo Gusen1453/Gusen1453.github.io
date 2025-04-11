@@ -7,8 +7,6 @@ image: /thumbnail-mobile.png
 author: "Gusen"
 ---
 
-# 使用Pydantic数据类生成OpenAI结构化输出格式
-
 Pydantic作为Python中强大的数据验证库，与OpenAI的结构化输出功能结合使用可以大幅提高AI应用的开发效率。本文将详细介绍如何通过一个实用函数将Pydantic模型转换为OpenAI的响应格式规范。
 
 ## Pydantic与OpenAI结构化输出的结合
