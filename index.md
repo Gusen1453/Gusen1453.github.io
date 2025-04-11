@@ -1,25 +1,24 @@
 ---
 layout: home
-lang: zh
 ---
 
-# {{ welcome_title }}
+# 欢迎来到我的个人网站
 
-{{ welcome_intro }}
+这是罗一鸣的个人网站，我在这里分享我的技术思考、项目经验和专业见解。
 
-{{ welcome_desc }}
+作为一名专注于大语言模型和金融科技领域的算法专家，我致力于探索人工智能在金融领域的创新应用。
 
-## {{ welcome_expertise }}
+## 我的专业领域
 
-- {{ expertise_1 }}
-- {{ expertise_2 }}
-- {{ expertise_3 }}
-- {{ expertise_4 }}
+- RAG技术架构与多Agent系统开发
+- 金融搜索与智能推荐系统
+- 数据平台及量化分析
+- 大模型落地实践与优化
 
-## {{ welcome_about }}
+## 关于我
 
-{{ welcome_about_text1 }}
+我在深圳市问智信息技术有限公司担任大模型算法Leader，负责金融综合问答系统的架构设计与实施，主导RAG和多Agent体系的构建。
 
-{{ welcome_about_text2 }}
+在此之前，我在浙江同花顺智能科技有限公司担任算法工程师，负责语音识别与合成项目的开发。
 
-{{ welcome_about_text3 }} [{{ welcome_about_text4 }}](/resume/) {{ welcome_about_text5 }} [{{ welcome_about_text6 }}](/contact/). 
+想了解更多关于我的信息，请查看[我的简历](/resume/)或[联系我](/contact/)。 

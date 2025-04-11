@@ -1,14 +1,13 @@
 ---
 layout: page
-title: 博客 | Blogs
+title: Blogs
 permalink: /blogs/
 ref: blogs
 order: 2
-lang: zh
 ---
 
 <div class="blogs-container">
-  <h2>{{ blog_featured }}</h2>
+  <h2>精选博客</h2>
   
   <div class="blog-list">
     {% for post in site.posts %}
@@ -21,10 +20,10 @@ lang: zh
         </h3>
         
         <div class="post-excerpt">
-          {{ post.excerpt | strip_html | truncatewords: 30 }}
+          {{ post.excerpt | markdownify | truncatewords: 30 }}
         </div>
         
-        <a href="{{ post.url | absolute_url }}" class="read-more">{{ blog_read_more }}</a>
+        <a href="{{ post.url | absolute_url }}" class="read-more">阅读更多...</a>
       </div>
     {% endfor %}
   </div>

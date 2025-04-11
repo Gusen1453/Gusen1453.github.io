@@ -6,7 +6,7 @@ layout: default
 
   {{ content }}
 
-  <h2>{{ blog_featured }}</h2>
+  <h2>精选博客</h2>
 
   <div>&nbsp;</div>
 
@@ -21,20 +21,16 @@ layout: default
           <a class="post-link" href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
 
-        <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
+        {{ post.excerpt | markdownify | truncatewords: 30 }}
         
-        <a href="{{ post.url | absolute_url }}" class="read-more">{{ blog_read_more }}</a>
+        <a href="{{ post.url | absolute_url }}" class="read-more">阅读更多...</a>
 
       </li>
     {% endfor %}
   </ul>
   
   <div class="see-all-posts">
-    {% if page.lang == 'en' %}
-      <a href="{{ '/en/blogs/' | absolute_url }}" class="all-posts-link">{{ blog_view_all }} »</a>
-    {% else %}
-      <a href="{{ '/blogs/' | absolute_url }}" class="all-posts-link">{{ blog_view_all }} »</a>
-    {% endif %}
+    <a href="{{ '/blogs/' | absolute_url }}" class="all-posts-link">查看全部博客 »</a>
   </div>
 
 </div>
@@ -72,10 +68,5 @@ layout: default
     background-color: #0256b4;
     text-decoration: none;
     color: white;
-  }
-  
-  .post-excerpt {
-    color: #333;
-    line-height: 1.6;
   }
 </style>
