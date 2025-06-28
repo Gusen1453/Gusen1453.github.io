@@ -117,6 +117,7 @@ def generate_python_function(description: str):
 
 **技术方案**：Guidance + 模板引擎
 
+{% raw %}
 ```python
 import guidance
 
@@ -155,6 +156,7 @@ analysis_template = """
 def analyze_data(user_query: str):
     return guidance(analysis_template, llm=model)(query=user_query)
 ```
+{% endraw %}
 
 ---
 
