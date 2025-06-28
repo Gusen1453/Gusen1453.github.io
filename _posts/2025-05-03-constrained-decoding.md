@@ -43,13 +43,15 @@ author: "Gusen"
 
 ```mermaid
 graph TD
-    A["输入"] --> B["微调模型"]
-    B --> C["提示工程优化"]
-    C --> D{"输出复杂度"}
-    D -->|"简单结构"| E["Transformers+Outlines"]
-    D -->|"嵌套结构"| F["vLLM+XGrammar"]
-    D -->|"动态流程"| G["vLLM+Guidance"]
-    F & G --> H["结构化输出"]
+    A[输入] --> B[微调模型]
+    B --> C[提示工程优化]
+    C --> D{输出复杂度}
+    D -->|简单结构| E[Transformers+Outlines]
+    D -->|嵌套结构| F[vLLM+XGrammar]
+    D -->|动态流程| G[vLLM+Guidance]
+    E --> H[结构化输出]
+    F --> H
+    G --> H
 ```
 
 ---
@@ -166,22 +168,22 @@ def analyze_data(user_query: str):
 
 ```mermaid
 graph TD
-    A["开始：结构化输出需求"] --> B{"输出格式复杂度"}
-    B -->|"简单线性格式"| C["Outlines/SGLang"]
-    B -->|"嵌套复杂结构"| D["XGrammar"]
-    B -->|"动态流程控制"| E["Guidance"]
+    A[开始：结构化输出需求] --> B{输出格式复杂度}
+    B -->|简单线性格式| C[Outlines/SGLang]
+    B -->|嵌套复杂结构| D[XGrammar]
+    B -->|动态流程控制| E[Guidance]
     
-    C --> F{"性能要求"}
-    F -->|"高吞吐量"| G["SGLang"]
-    F -->|"标准性能"| H["Outlines"]
+    C --> F{性能要求}
+    F -->|高吞吐量| G[SGLang]
+    F -->|标准性能| H[Outlines]
     
-    D --> I{"结构稳定性"}
-    I -->|"固定schema"| J["XGrammar"]
-    I -->|"动态schema"| K["Guidance"]
+    D --> I{结构稳定性}
+    I -->|固定schema| J[XGrammar]
+    I -->|动态schema| K[Guidance]
     
-    E --> L{"逻辑复杂度"}
-    L -->|"简单条件"| M["Guidance基础模板"]
-    L -->|"复杂推理"| N["Guidance+微调模型"]
+    E --> L{逻辑复杂度}
+    L -->|简单条件| M[Guidance基础模板]
+    L -->|复杂推理| N[Guidance+微调模型]
 ```
 
 ---

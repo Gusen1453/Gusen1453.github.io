@@ -162,12 +162,45 @@
         
         <!-- Initialize Mermaid -->
         <script>
-            mermaid.initialize({
-                startOnLoad: true,
-                theme: 'default',
-                flowchart: {
-                    useMaxWidth: true,
-                    htmlLabels: true
+            document.addEventListener('DOMContentLoaded', function() {
+                // 检查Mermaid是否已加载
+                if (typeof mermaid !== 'undefined') {
+                    console.log('Mermaid library loaded, initializing...');
+                    
+                    mermaid.initialize({
+                        startOnLoad: false,  // 手动控制渲染
+                        theme: 'default',
+                        flowchart: {
+                            useMaxWidth: true,
+                            htmlLabels: true,
+                            curve: 'basis'
+                        },
+                        securityLevel: 'loose',
+                        logLevel: 1  // 启用调试日志
+                    });
+                    
+                    // 等待一小段时间确保DOM完全加载
+                    setTimeout(function() {
+                        try {
+                            // 查找所有mermaid代码块并渲染
+                            var mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+                            mermaidBlocks.forEach(function(block) {
+                                var parent = block.parentElement;
+                                if (parent) {
+                                    parent.className = 'mermaid';
+                                    parent.textContent = block.textContent;
+                                }
+                            });
+                            
+                            // 手动触发Mermaid渲染
+                            mermaid.init(undefined, '.mermaid');
+                            console.log('Mermaid initialization completed');
+                        } catch (error) {
+                            console.error('Error initializing Mermaid:', error);
+                        }
+                    }, 100);
+                } else {
+                    console.error('Mermaid library not loaded');
                 }
             });
         </script>
